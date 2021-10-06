@@ -1,14 +1,5 @@
-const readline = require('readline');
-
-
-const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
-});
-
-
-const coins = [
-    {
+//moedas aceitas na máquina
+const coins = [{
         nome: "1¢",
         valor: 0.01
     },
@@ -34,34 +25,46 @@ const coins = [
     },
 ]
 
-var totalCoins = 0
+//verifica se foi digitado o valor de uma moeda válida no array
+function isCoin(valor) {
+
+    var index = coins.findIndex(val => val.valor == valor)
 
 
-function addCoins() {
-    rl.question('Insira uma moeda: ', (values) => {
+    if (index >= 0) {
+        return true
+    } 
 
-        var valor = parseFloat(values)
-    
-        var index = coins.findIndex(val => val.valor == values)
-    
-        
-            for (var i = 0; i < 1; i++) {
-                if (index >= 0) {
-                    totalCoins += valor
-                    console.log(`Você inseriu ${valor} e seu saldo é: ${totalCoins}`)
-                    addCoins()
-                } else {
-                    console.log('erro')
-                    return
-                }
-            }
-        
-    })
+    return false
+
+
 }
 
-addCoins()
+//função que adiciona as moedas
+function addCoins(value, totalCoins) {
+    console.log('Aceitamos moedas de: 0.01, 0.05, 0.10, 0.50 and 1.00')
+    /* rl.question('Insira uma moeda: ', (values) => { */
 
-module.exports = addCoins()
+    var valor = parseFloat(value)
+
+    var index = coins.findIndex(val => val.valor == value)
+
+
+    
+        if (index >= 0) {
+            totalCoins += valor
+            console.log(`Você inseriu ${valor} e seu saldo é: ${totalCoins}`)
+            return totalCoins
+        } else {
+            console.log('erro')
+            return
+        }
+
+    /* }) */
+}
+
+module.exports = {isCoin, addCoins}
+
 
 /**
  * function addCoins(valor) {
