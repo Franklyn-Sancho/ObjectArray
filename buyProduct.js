@@ -14,6 +14,7 @@ const products = [
     }
 ]
 
+
 //função que verifica se é moeda ou um produto
 function isProduct(product) {
     var index = products.findIndex((val) => val.name == product)
@@ -27,9 +28,12 @@ function isProduct(product) {
 
 
 
+
+
 //função que faz a compra do produto
 function buyProduct(produto, totalCoins) {
     console.log('[chocolate: 2.00; coke: 1.50; popcorn: 5.00 ]')
+
 
    /*  rl.question('Escolha um produto: ',  (produto) => { */
 
@@ -40,6 +44,9 @@ function buyProduct(produto, totalCoins) {
 
         if (index >= 0) {
             console.log(`Obrigado pela preferência, seu troco é: ${change}`)
+
+
+
         } else {
             console.log('Ainda não temos esse produto/saldo insuficiente')
         }
