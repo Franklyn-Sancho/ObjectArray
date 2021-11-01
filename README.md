@@ -15,9 +15,7 @@ vending machine project javascript building. The main project is in: "machine.js
 ![Badge](https://img.shields.io/static/v1?label=nodejs&message=Code&color=green&style=for-the-badge&logo=node.js)
 ![Badge](https://img.shields.io/static/v1?label=javascript&message=Code&color=yellow&style=for-the-badge&logo=javascript)
 
-## Besides
 
-I want to thank DELL TECHNOLOGIES for this opportunity. I'm ready to learn
 
 # VendingMachine (versão em português)
 
@@ -37,7 +35,5 @@ Projeto de uma vending machine feita em Javascript. O projeto principal está no
 ![Badge](https://img.shields.io/static/v1?label=nodejs&message=Code&color=green&style=for-the-badge&logo=node.js)
 ![Badge](https://img.shields.io/static/v1?label=javascript&message=Code&color=yellow&style=for-the-badge&logo=javascript)
 
-## obs finais: 
 
-Código construído durante uma entrevista na Dell Technology
 
