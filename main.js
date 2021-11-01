@@ -9,7 +9,7 @@ const rl = readline.createInterface({
 
 function question(theQuestion) {
     return new Promise(resolve => rl.question(theQuestion, answ => resolve(answ)))
-}
+} //função assincrona
 
 var totalCoins = 0;
 
@@ -22,16 +22,16 @@ async function vendingMachine() {
     console.log('==========================')
     console.log('Insira um valor de moeda para inserir moeda ou insira o nome do produto: ')
 
-    while (true) {
+    while (true) { //enquanto for verdade, o loop continuará funcionando
 
 
         let option = await question('Escolha a sua opção aqui: ')
-        if (coins.isCoin(option)) {
-            totalCoins = coins.addCoins(option, totalCoins)
+        if (coins.isCoin(option)) { //chama a função que verifica se é uma moeda
+            totalCoins = coins.addCoins(option, totalCoins) //Se for uma moeda, vai adicional na variável totalCoins
         }
         if (product.isProduct(option)) {
-            product.buyProduct(option, totalCoins)
-             console.log(totalCoins)
+            product.buyProduct(option, totalCoins) //chama a função que verifica se é um produto.
+             console.log(totalCoins) //se for um produto retorna o totalCoins
              
         }
 
